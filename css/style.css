@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgb(255,233,232),rgb(212, 35, 65));
+    background-image: linear-gradient(rgb(255,233,232),rgb(215, 161, 170));
 }
 h1{
     display: block;
@@ -18,8 +18,9 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container{
     max-width: 966px;
-    background-color: rgb(182, 174, 176);
+    background-color: rgb(227, 128, 104);
     margin:auto;
+    border: 4px blue;  
     margin-bottom: 12px;
     height: 700px;
     width: 8798px;
