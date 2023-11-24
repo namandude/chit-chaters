@@ -7,7 +7,7 @@ const socket=io("http://localhost:8000",{ transports: ["websocket","polling","fl
 const form = document.getElementById('send-container');
 const messageInput= document.getElementById('messageInp');
 const messageContainer= document.querySelector(".container");
-// var audio = new Audio('funny.mp3');
+ var audio = new Audio('funny.mp3');
 // above line means jab bhi apne message aynge apnko .container me dakna hai 4
 const append=(message,position)=>{
     const messageElement= document.createElement('div');
@@ -15,11 +15,11 @@ messageElement.innerText=message;
 messageElement.classList.add('message');
 messageElement.classList.add(position);
 messageContainer.append(messageElement);
-// if(position=='left'){
+if(position=='left'){
 
-// audio.play();}
-// }
+audio.play();}
 }
+
 
 // first we take the usee name promnpts
 
@@ -33,7 +33,7 @@ form.addEventListener('submit',(e)=>{
 
 })
 
-// const naame= prompt("Enter your Name");
+ const naame= prompt("Enter your Name");
 socket.emit('new-user-joined',naame);
 socket.on('user-joined', naame=>{
 append(`${naame} joined the chat`,'right');
